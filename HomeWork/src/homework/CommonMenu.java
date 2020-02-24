@@ -37,6 +37,9 @@ public class CommonMenu {
            JMenu report = new JMenu("Report");
            jMenuBar.add(report);
            
+            JMenu bill = new JMenu("Billing System");
+           jMenuBar.add(bill);
+           
            JMenuItem dashbordO = new JMenuItem("Open");
            JMenuItem dashbordC = new JMenuItem("Close");
            JMenuItem productCatagoryO = new JMenuItem("Open");
@@ -49,6 +52,8 @@ public class CommonMenu {
            JMenuItem salesC = new JMenuItem("Close");
            JMenuItem reportO = new JMenuItem("Open");
            JMenuItem reportC = new JMenuItem("Close");
+            JMenuItem billO = new JMenuItem("Open");
+            JMenuItem billC = new JMenuItem("Close");
            
         
            
@@ -137,6 +142,21 @@ public class CommonMenu {
                 new LogInPage().setVisible(true);
             }
         });
+            
+             billO.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                f.setVisible(false);
+                new BillingSystem().setVisible(true);
+            }
+        });
+            billC.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                f.setVisible(false);
+                new LogInPage().setVisible(true);
+            }
+        });
            
             dashbord.add(dashbordO);
            dashbord.add(dashbordC);
@@ -150,6 +170,8 @@ public class CommonMenu {
            sales.add(salesC);
            report.add(reportO);
            report.add(reportC);
+           bill.add(billO);
+           bill.add(billC);
  
       
         f.setJMenuBar(jMenuBar);
