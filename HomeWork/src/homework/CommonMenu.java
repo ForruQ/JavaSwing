@@ -12,6 +12,7 @@ import javax.swing.JMenuItem;
 import javax.swing.KeyStroke;
 
 public class CommonMenu {
+    
     public static void getCommonMenu(JFrame f) {
          JMenuBar jMenuBar = new JMenuBar();
          
@@ -61,7 +62,8 @@ public class CommonMenu {
             @Override
             public void actionPerformed(ActionEvent e) {
                 f.setVisible(false);
-                new DashBoard().setVisible(true);
+                DashBoard d = new DashBoard();
+                d.setVisible(true);
             }
         });
             dashbordC.addActionListener(new ActionListener() {

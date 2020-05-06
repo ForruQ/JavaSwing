@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<company>
+    <staff>
+        <firstname>Sumayia</firstname>
+        <lastname>Ferdouse</lastname>
+        <nickname>Swarna</nickname>
+        <salay>90000</salay>
+        <country>Bd</country>
+        
+    </staff>
+
+
+<staff>
+        <firstname>Ummey</firstname>
+        <lastname>Hani</lastname>
+        <nickname>Priya</nickname>
+        <salay>80000</salay>
+        <country>Bd</country>
+        
+    </staff>
+
+<staff>
+        <firstname>Ummey</firstname>
+        <lastname>Sani</lastname>
+        <nickname>Munmun</nickname>
+        <salay>70000</salay>
+        <country>Bd</country>
+        
+    </staff>
+
+<staff>
+        <firstname>Ummey</firstname>
+        <lastname>Sabi</lastname>
+        <nickname>Tulul</ickname>
+        <salay>50000</salay>
+        <country>Bd</country>
+        
+    </staff>
+
+<staff>
+        <firstname>Sumayia</firstname>
+        <lastname>Ferdouse</lastname>
+        <nickname>Swarna</nickname>
+        <salay>60000</salay>
+        <country>Bd</country>
+        
+    </staff>
+
+
+
+</company>
