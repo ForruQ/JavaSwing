@@ -6,7 +6,11 @@ import com.shujon.pojo.Product;
 import com.shujon.service.CommonServiceAdapter;
 import com.shujon.serviceImpl.CategoryServiceImpl;
 import com.shujon.serviceImpl.ProductServiceImpl;
+import java.awt.print.PrinterException;
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
 
 
@@ -76,6 +80,11 @@ CommonServiceAdapter commonService = new ProductServiceImpl();
 
         jButton1.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         jButton1.setText("Print");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
         getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(48, 494, -1, -1));
 
         jButton2.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
@@ -87,7 +96,7 @@ CommonServiceAdapter commonService = new ProductServiceImpl();
         });
         getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 494, -1, -1));
 
-        jPanel1.setBackground(new java.awt.Color(0, 102, 102));
+        jPanel1.setBackground(new java.awt.Color(204, 204, 255));
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -109,6 +118,15 @@ CommonServiceAdapter commonService = new ProductServiceImpl();
         // TODO add your handling code here:
         this.setVisible(false);
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    try {
+        // TODO add your handling code here:
+        tblDisplay.print(JTable.PrintMode.NORMAL);
+    } catch (PrinterException ex) {
+        Logger.getLogger(ProductDetails.class.getName()).log(Level.SEVERE, null, ex);
+    }
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments

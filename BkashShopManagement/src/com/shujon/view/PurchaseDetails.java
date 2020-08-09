@@ -9,7 +9,11 @@ import com.shujon.serviceImpl.CategoryServiceImpl;
 import com.shujon.serviceImpl.ProductServiceImpl;
 import com.shujon.serviceImpl.PurchaseServiceImpl;
 import com.shujon.serviceImpl.SummaryServiceImpl;
+import java.awt.print.PrinterException;
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
 
 
@@ -84,6 +88,11 @@ public class PurchaseDetails extends javax.swing.JFrame {
 
         jButton1.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         jButton1.setText("Print");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
         getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(48, 494, -1, -1));
 
         jButton2.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
@@ -117,6 +126,15 @@ public class PurchaseDetails extends javax.swing.JFrame {
         // TODO add your handling code here:
         this.setVisible(false);
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+       try {
+           // TODO add your handling code here:
+           tblDisplay.print(JTable.PrintMode.NORMAL);
+       } catch (PrinterException ex) {
+           Logger.getLogger(PurchaseDetails.class.getName()).log(Level.SEVERE, null, ex);
+       }
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments

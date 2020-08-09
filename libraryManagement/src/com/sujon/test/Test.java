@@ -18,17 +18,17 @@ import java.sql.Connection;
 public class Test {
 
     public static void main(String[] args) {
-//        Connection con = DbConnection.getInstance();
-//        AdapterService authorService = new AuthorServiceImpl();
-//        AdapterService catService = new CategoryServiceImpl();
-//        AdapterService departmentService = new DepartmentServiceImpl();
-//        AdapterService editionService = new EditionServiceImpl();
-//        AdapterService publisherService = new PublisherServiceImpl();
-//        AdapterService sessionService = new SesssionServiceImpl();
-//        AdapterService purchaseService = new PurchaseServiceImpl();
-//        AdapterService studentService = new StudentServiceImpl();
-//        AdapterService  isseBookService= new IssueBookServiceImpl();
-//        AdapterService  bookRecieveService= new BookRecieveServiceImpl();
+        Connection con = DbConnection.getInstance();
+        AdapterService authorService = new AuthorServiceImpl();
+        AdapterService catService = new CategoryServiceImpl();
+        AdapterService departmentService = new DepartmentServiceImpl();
+        AdapterService editionService = new EditionServiceImpl();
+        AdapterService publisherService = new PublisherServiceImpl();
+        AdapterService sessionService = new SesssionServiceImpl();
+        AdapterService purchaseService = new PurchaseServiceImpl();
+        AdapterService studentService = new StudentServiceImpl();
+        AdapterService  isseBookService= new IssueBookServiceImpl();
+        AdapterService  bookRecieveService= new BookRecieveServiceImpl();
         AdapterService  userService= new UserServiceImpl();
         userService.creatTable();
 //        bookRecieveService.creatTable();
@@ -36,7 +36,7 @@ public class Test {
 //        studentService.creatTable();
 //        purchaseService.creatTable();
 //        sessionService.creatTable();
-//        publisherService.creatTable();
+//       publisherService.creatTable();
 //        editionService.creatTable();
 //        departmentService.creatTable();
 //        catService.creatTable();
