@@ -45,7 +45,7 @@ public class Test {
 //        for (Student s : list) {
 //            System.out.println("Name: " + s.getName() + " Note: " + s.getNote());
 //        }
-        teacherService.getListById(1);
+//        teacherService.getListById(1);
 
     }
 
